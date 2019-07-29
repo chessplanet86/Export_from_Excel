@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Фреймы</title>
+    <meta charset="UTF-8">
+    <script src="jquery-3.4.1.js"></script>
+    <script src="xlsx.js"></script>
+    <style>
+        th {
+            border: 1px solid black;
+        }
+
+        td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Загрузите файл в формате xls или в формате xml</p>
+    <input id="fileInput" type="file" size="50" onchange="processFiles(this.files)">
+    <br>
+    <br>
+    <button id='showSheets'>Показать список листов</button>
+    <br>
+    <br>
+    <div>Документы содержит следующие листы:</div>
+    <div></div>
+    <button id='buildTable'>Построить таблицу</button>
+
+</html>
+
+
+<script src="task5.js"></script>
+<script src="viewTable.js"></script>

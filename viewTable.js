@@ -36,7 +36,6 @@ showSheets.addEventListener('click', function () {
 });
 
 buildTable.addEventListener('click', function () {
-    console.log('Начал строить')
     if (document.querySelector('table') != null) {
         document.querySelector('table').parentElement.removeChild(document.querySelector('table'));
     }
@@ -54,16 +53,11 @@ buildTable.addEventListener('click', function () {
     };
     thead.appendChild(tr);
     table.appendChild(thead);
-    console.log(table);
     for (let i = 0; i < nameSheets[selectedSheet].length; i++) {
         let tr = document.createElement('tr');
-        console.log(nameSheets[selectedSheet][i]);
-
         for (key in nameSheets[selectedSheet][i]) {
-            console.log(key);
             let td = document.createElement('td');
             let str = nameSheets[selectedSheet][i][key];
-            console.log(str);
             td.textContent = str;
             tr.appendChild(td);
         };
